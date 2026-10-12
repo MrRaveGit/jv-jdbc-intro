@@ -102,7 +102,7 @@ public class BookDaoImpl implements BookDao {
             statement.setLong(3, book.getId());
             int affectedRows = statement.executeUpdate();
             if (affectedRows < 1) {
-                throw new RuntimeException("Excepted to update at least 1 row,"
+                throw new DataProcessingException("Excepted to update at least 1 row,"
                         + " but inserted 0 rows");
             }
         } catch (SQLException e) {
