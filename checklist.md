@@ -1,4 +1,4 @@
-## Common mistakes
+mvnw clean package## Common mistakes
 
 * Try to avoid code duplication. Especially, when you are working with ResultSet.
   Move retrieving data from ResultSet into Entity object to a separate private method.
