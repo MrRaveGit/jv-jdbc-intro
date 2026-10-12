@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
+import mate.academy.exception.DataProcessingException;
 
 public class ConnectionUtil {
 
@@ -18,7 +19,7 @@ public class ConnectionUtil {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Can not create a connection to the DB", e);
+            throw new DataProcessingException("Can not create a connection to the DB", e);
         }
     }
 
